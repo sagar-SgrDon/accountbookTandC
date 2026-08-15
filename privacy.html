@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Privacy Policy</title>
+    <title>Privacy Policy - AccountBook</title>
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -61,219 +61,191 @@
         padding: 15px;
         border-radius: 5px;
         margin: 15px 0;
+        border-left: 4px solid #1a73e8;
       }
     </style>
   </head>
   <body>
     <h1>Privacy Policy for AccountBook App</h1>
+    <p><em>Last Updated: July 31, 2026</em></p>
 
     <div class="section">
       <h2>Introduction</h2>
       <p>
-        Welcome to AccountBook. This Privacy Policy explains how Sagar and
-        Radhika (collectively referred to as "SaRa," "we," "us," or "our")
+        Welcome to <strong>AccountBook</strong>. This Privacy Policy explains how SaRa Studios ("we," "us," or "our")
         collect, use, disclose, and safeguard your information when you use our
-        AccountBook mobile application (the "App"). Please read this Privacy
-        Policy carefully. By using the App, you agree to the collection and use
-        of information in accordance with this policy.
+        AccountBook mobile application (the "App").
       </p>
+      <p>
+        AccountBook is designed with a <strong>Local-First Architecture</strong>, prioritizing your privacy, speed, and offline capability by keeping your primary data encrypted on your own device. Please read this policy carefully to understand how your data is handled.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>On-Device Data Storage & Encryption</h2>
+      <div class="highlight">
+        <p>
+          <strong>Your Data Lives on Your Device First:</strong> Unlike cloud-only applications, AccountBook stores your account records, transactions, categories, and running balances directly on your mobile device in an encrypted local database.
+        </p>
+      </div>
+      <ul>
+        <li>
+          <strong>Secure On-Device Storage:</strong> All local financial records are protected using strong AES encryption. Encryption keys are securely stored using the device's secure key storage mechanisms where supported by the operating system.
+        </li>
+        <li>
+          <strong>Offline Capabilities:</strong> The core bookkeeping features of the App are available offline. Some features, such as cloud synchronization, sign-in, and advertisements, require an internet connection.
+        </li>
+        <li>
+          <strong>Secure Cloud Synchronization:</strong> When an active network connection is available, changes synchronize securely with cloud storage. Data is encrypted during transmission using secure HTTPS/TLS connections and protected while stored using industry-standard security measures.
+        </li>
+      </ul>
     </div>
 
     <div class="section">
       <h2>Information We Collect</h2>
 
       <div class="sub-section">
-        <h3>Personal Information</h3>
+        <h3>1. Account & Authentication Information</h3>
         <p>
-          We may collect personal information that you voluntarily provide when
-          using our App, including:
+          When you register or sign in, we collect basic authentication information, including:
         </p>
         <ul>
+          <li>Email address</li>
+          <li>Display name (optional)</li>
+          <li>Account creation timestamps</li>
+        </ul>
+      </div>
+
+      <div class="sub-section">
+        <h3>2. Financial & User-Generated Content</h3>
+        <p>
+          You enter financial data to manage your personal or business ledger, including:
+        </p>
+        <ul>
+          <li>Account names and starting balances</li>
+          <li>Transaction amounts, dates, descriptions, and categories</li>
+          <li>Recurring payment schedules</li>
+        </ul>
+        <p>
+          This data is saved directly on your phone and backed up securely to your private account when connected to the internet.
+        </p>
+      </div>
+
+      <div class="sub-section">
+        <h3>3. Device Information & Preferences</h3>
+        <ul>
           <li>
-            <strong>Account Information:</strong> When you create an account, we
-            collect your name, email address, and account creation timestamp
-            through Firebase Authentication.
+            <strong>User Preferences:</strong> Dark mode settings, app theme choices, and security options saved on your device.
           </li>
           <li>
-            <strong>User Preferences:</strong> We collect and store your
-            preferences such as dark mode settings and biometric authentication
-            preferences using AsyncStorage and Firebase.
+            <strong>Technical Device Information:</strong> Certain technical device information may be collected by third-party services (such as Firebase or Google AdMob) for security, sync conflict resolution, analytics, and reliability purposes.
           </li>
         </ul>
       </div>
 
       <div class="sub-section">
-        <h3>Non-Personal Information</h3>
+        <h3>4. Biometric Data</h3>
         <p>
-          We may also collect non-personal information automatically when you
-          use our App:
+          If you choose to enable Biometric Lock (Fingerprint / Face Unlock), authentication is processed 100% locally by your mobile device's operating system. <strong>We never collect, see, or store your biometric data on our servers.</strong>
         </p>
-        <ul>
-          <li>
-            <strong>Device Information:</strong> Information about your mobile
-            device including device type, operating system, and unique device
-            identifiers.
-          </li>
-          <li>
-            <strong>Usage Data:</strong> Information about how you use the App,
-            including account and transaction statistics.
-          </li>
-          <li>
-            <strong>Log Data:</strong> Information that your browser or device
-            automatically sends whenever you use our App.
-          </li>
-        </ul>
       </div>
+    </div>
 
+    <div class="section">
+      <h2>Data Import & Export Features</h2>
       <div class="sub-section">
-        <h3>User-Generated Content</h3>
-        <p>The App allows you to create and store the following content:</p>
-        <ul>
-          <li>Account information (names, balances, categories)</li>
-          <li>
-            Transaction records (amounts, dates, descriptions, categories)
-          </li>
-        </ul>
+        <h3>File Import (CSV / Excel)</h3>
         <p>
-          This content is stored in Firebase and is associated with your user
-          account.
+          Imported files are parsed locally on your device and written directly to your local encrypted database. Imported files may be subject to size and format limitations to ensure reliable performance.
+        </p>
+
+        <h3>File Export (PDF / CSV / Excel)</h3>
+        <p>
+          Generating financial statements (PDF, CSV, Excel) is performed entirely on your device. Exported documents are saved to your local storage or shared via native OS share tools at your explicit direction.
         </p>
       </div>
     </div>
 
     <div class="section">
       <h2>How We Use Your Information</h2>
-      <p>
-        We use the information we collect for various purposes, including to:
-      </p>
+      <p>We use your information strictly for the following operational purposes:</p>
       <ul>
-        <li>Provide, maintain, and improve our App</li>
-        <li>Create and manage your account</li>
-        <li>Process and store your financial transactions and accounts</li>
-        <li>Respond to your comments, questions, and requests</li>
-        <li>Send you technical notices, updates, and support messages</li>
-        <li>
-          Enable biometric authentication if you choose to use this feature
-        </li>
-        <li>Monitor usage of our App for improvement and development</li>
-        <li>Detect, prevent, and address technical issues</li>
+        <li>Providing offline financial ledger tools, balance calculations, and statement generation</li>
+        <li>Synchronizing your data across your authorized devices</li>
+        <li>Protecting your records with local encryption and optional biometric locks</li>
+        <li>Displaying non-intrusive advertisements (e.g., optional rewarded ad views for file features)</li>
+        <li>Providing support and addressing user feedback</li>
       </ul>
-    </div>
-
-    <div class="section">
-      <h2>Data Storage and Security</h2>
-      <p>
-        We use Firebase, a service provided by Google, to store and process your
-        data. Your information is stored according to Firebase's security
-        protocols. We implement appropriate technical and organizational
-        measures to protect your personal information against unauthorized or
-        unlawful processing, accidental loss, destruction, or damage.
-      </p>
-
-      <p>
-        If you enable biometric authentication, your biometric data is processed
-        locally on your device and is not stored on our servers. Only a record
-        of your preference to use biometric authentication is stored.
-      </p>
     </div>
 
     <div class="section">
       <h2>Third-Party Services</h2>
-      <p>Our App uses the following third-party services:</p>
+      <p>AccountBook integrates with industry-standard third-party providers:</p>
       <ul>
         <li>
-          <strong>Firebase:</strong> For authentication, data storage, and
-          analytics
+          <strong>Google Services:</strong> For secure user authentication and cloud synchronization.
         </li>
-        <li><strong>Google Sign-In:</strong> For account authentication</li>
         <li>
-          <strong>React Native Biometrics:</strong> For biometric authentication
-          functionality
+          <strong>Google AdMob:</strong> For serving non-intrusive advertisements. AdMob may process device identifiers according to Google's standard advertising policies.
         </li>
       </ul>
+    </div>
+
+    <div class="section">
+      <h2>Data Security & Retention</h2>
       <p>
-        These third-party services may collect information sent by your device
-        as part of their functionality. Their use of your information is
-        governed by their respective privacy policies, which we encourage you to
-        review.
+        We utilize industry-standard technical measures including local database encryption, secure transmission protocols (TLS/HTTPS), and access controls. Your data remains stored in your app and linked cloud profile for as long as your account exists.
       </p>
     </div>
 
     <div class="section">
-      <h2>Your Rights</h2>
+      <h2>Data Control and Deletion Rights</h2>
       <p>
-        Depending on your location, you may have certain rights regarding your
-        personal information, including:
+        You have complete control over your data directly within the App:
       </p>
       <ul>
-        <li>The right to access the personal information we have about you</li>
-        <li>The right to request correction of inaccurate information</li>
-        <li>The right to request deletion of your information</li>
-        <li>
-          The right to restrict or object to processing of your information
-        </li>
-        <li>The right to data portability</li>
+        <li><strong>Delete Transactions:</strong> Permanently remove individual transaction records.</li>
+        <li><strong>Delete Accounts:</strong> Delete entire financial ledgers and associated transaction records.</li>
+        <li><strong>Delete User Account:</strong> Permanently delete your profile from User Settings, purging all local databases and cloud records.</li>
       </ul>
       <p>
-        To exercise these rights, please contact us using the information
-        provided in the "Contact Us" section below.
+        For step-by-step guidance, please refer to our <a href="data-deletion.html">Data Deletion Policy</a>.
       </p>
     </div>
 
     <div class="section">
       <h2>App Permissions</h2>
-      <p>Our App requires the following permissions to function properly:</p>
+      <p>AccountBook requests standard device permissions:</p>
       <ul>
-        <li>
-          <strong>Internet:</strong> Required to connect to our servers and
-          third-party services
-        </li>
-        <li>
-          <strong>Storage:</strong> Required to store data locally on your
-          device
-        </li>
-        <li>
-          <strong>Biometric Hardware:</strong> Required if you choose to use
-          biometric authentication
-        </li>
+        <li><strong>Internet:</strong> For cloud sync and ad delivery when online.</li>
+        <li><strong>Storage / Media:</strong> For saving exported PDF/Excel statements and picking CSV/Excel files to import.</li>
+        <li><strong>Biometric Hardware:</strong> Optional, to unlock the app with fingerprint or Face ID.</li>
       </ul>
     </div>
 
     <div class="section">
       <h2>Children's Privacy</h2>
       <p>
-        Our App is not intended for children under the age of 13. We do not
-        knowingly collect personal information from children under 13. If you
-        are a parent or guardian and believe your child has provided us with
-        personal information, please contact us so we can take necessary
-        actions.
+        AccountBook is not intended for children under 13. We do not knowingly collect information from children.
       </p>
     </div>
 
     <div class="section">
       <h2>Changes to This Privacy Policy</h2>
       <p>
-        We may update our Privacy Policy from time to time. We will notify you
-        of any changes by posting the new Privacy Policy on this page and
-        updating the "Effective Date" at the top of this Privacy Policy. You are
-        advised to review this Privacy Policy periodically for any changes.
+        We may update this policy periodically. Revisions take effect immediately upon posting to this page.
       </p>
     </div>
 
     <div class="section">
       <h2>Contact Us</h2>
       <p>
-        If you have any questions or suggestions about our Privacy Policy,
-        please contact us at:
+        If you have questions about this Privacy Policy, please contact us:
       </p>
       <ul>
-        <li><strong>Email:</strong> sagarradhika96@gmail.com</li>
+        <li><strong>Developer:</strong> SaRa Studios</li>
+        <li><strong>Email:</strong> <a href="mailto:support.accbook@gmail.com">support.accbook@gmail.com</a></li>
       </ul>
     </div>
-
-    <p>
-      By using the AccountBook App, you acknowledge that you have read and
-      understood this Privacy Policy and agree to its terms and conditions.
-    </p>
   </body>
 </html>

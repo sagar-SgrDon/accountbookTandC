@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Data Deletion – Account Book App</title>
+  <title>Data Deletion Policy - AccountBook</title>
   <style>
     body {
       font-family: Arial, Helvetica, sans-serif;
@@ -54,54 +54,65 @@
 <body>
 
   <div class="container">
-    <h1>Data Deletion – Account Book App</h1>
+    <h1>Data Deletion Policy - AccountBook App</h1>
 
     <p>
-      Account Book provides users with full control over their data.
-      Users can delete data at multiple levels directly from within the app.
+      AccountBook provides users with full control over their personal financial data.
+      You can delete data at multiple granular levels directly within the App or request full user account deletion.
     </p>
 
     <h2>1. Delete Individual Transactions</h2>
     <p>
-      Users can delete individual financial transactions without deleting
-      their user account.
+      Users can delete single or multiple financial transactions without affecting their general account settings.
     </p>
     <ol>
-      <li>Open the <strong>Account Book</strong> app</li>
-      <li>Select an account</li>
-      <li>Long Press a transaction</li>
-      <li>Tap <strong>Delete icon</strong> and confirm</li>
+      <li>Open the <strong>AccountBook</strong> App</li>
+      <li>Select your active financial account</li>
+      <li>Long press a transaction record (or select multiple transactions)</li>
+      <li>Tap the <strong>Delete (Trash) icon</strong> and confirm deletion</li>
     </ol>
-
-    <h2>2. Delete an Account (Inside the App)</h2>
     <p>
-      Users can create multiple accounts (for example: Personal or Business).
-      Any account can be deleted independently.
+      <em>Technical Action:</em> The records are immediately soft-deleted and removed from your local encrypted SQLite database and synced to permanently purge from Google Firestore when online.
+    </p>
+
+    <h2>2. Delete an Account Ledger</h2>
+    <p>
+      Users can manage multiple financial ledgers (e.g., Personal, Business, Savings). Any individual account ledger can be deleted independently.
+    </p>
+    <ol>
+      <li>Go to Account Settings</li>
+      <li>Select <strong>Delete Account Ledger</strong></li>
+      <li>Confirm deletion</li>
+    </ol>
+    <p>
+      <em>Technical Action:</em> The target account record, all linked transactions, and un-linked transfer references are completely purged from your local SQLite database and cloud storage.
+    </p>
+
+    <h2>3. Delete Entire User Account (Full Purge)</h2>
+    <p>
+      You can permanently delete your entire AccountBook profile directly inside the App settings.
+    </p>
+    <ol>
+      <li>Open the <strong>UserSettings</strong> screen in the App</li>
+      <li>Scroll down to the bottom and select <strong>Delete Account</strong></li>
+      <li>Confirm double-deletion warnings</li>
+    </ol>
+    <p>
+      <em>Technical Action:</em>
     </p>
     <ul>
-      <li>The selected account is permanently removed</li>
-      <li>All transactions under that account are permanently deleted</li>
-      <li>The user login remains active</li>
-    </ul>
-
-    <h2>3. Delete User Account (Login Deletion)</h2>
-    <p>
-      Users can permanently delete their entire Account Book user account
-      from the app User Profile.
-    </p>
-    <ul>
-      <li>User authentication data (Firebase Authentication)</li>
-      <li>All accounts created by the user</li>
-      <li>All associated transactions and data</li>
+      <li>Purges your user authentication document from Firebase Authentication</li>
+      <li>Deletes all cloud Firestore documents, account structures, and encrypted payloads</li>
+      <li>Clears all local SQLite encrypted database files and cached credentials from your physical mobile device</li>
     </ul>
 
     <div class="note">
-      <strong>Important:</strong> All deletions are permanent and irreversible.
+      <strong>Important:</strong> All data deletions are permanent, immediate, and non-reversible.
     </div>
 
-    <h2>Contact Support</h2>
+    <h2>4. Assistance & Manual Deletion Requests</h2>
     <p>
-      If you need help with deleting data or your account, please contact us:
+      If you are unable to access the App or require manual account deletion assistance, please send a deletion request from your registered email address to:
     </p>
     <p>
       <strong>Email:</strong>
@@ -110,7 +121,7 @@
 
     <footer>
       <p>
-        © 2025 Account Book<br />
+        © 2026 AccountBook | SaRa Studios<br />
         All rights reserved.
       </p>
     </footer>
